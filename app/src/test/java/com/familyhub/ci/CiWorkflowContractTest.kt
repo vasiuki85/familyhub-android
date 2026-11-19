@@ -238,7 +238,7 @@ class CiWorkflowContractTest {
         assertFalse(text.contains("actions: write"))
         assertTrue(text.contains("validate-wrappers: true"))
         assertTrue(text.contains("ElementTree"))
-        assertTrue(text.contains("tests == pass == 67"))
+        assertTrue(text.contains("tests == pass == 76"))
         assertTrue(text.contains("Node test summary block"))
         assertTrue(text.contains("verify-android-test-results.sh --self-test"))
         assertTrue(text.contains("verify-native-page-size.sh"))

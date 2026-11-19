@@ -216,7 +216,7 @@ jobs:
         run: |
           set -euo pipefail
           npm test --prefix firestore-rules-tests 2>&1 | tee firestore-test.log
-          bash .github/scripts/verify-firestore-test-results.sh firestore-test.log 67
+          bash .github/scripts/verify-firestore-test-results.sh firestore-test.log 76
 
       - name: Upload Firestore emulator log on failure
         if: failure()

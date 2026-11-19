@@ -50,7 +50,7 @@ app/src/main/java/com/familyhub/
 
 - UI observes `StateFlow` from ViewModels; repositories expose Room `Flow`s, so every screen updates reactively.
 - The sync engine (`data/sync/`) uploads local changes transactionally, merges remote state (including completion cycles and reward requests), and records deletions as tombstones so they propagate reliably across devices.
-- Firestore security rules (`firestore.rules`) mirror the client's role model and are covered by 67 emulator-based tests.
+- Firestore security rules (`firestore.rules`) mirror the client's role model and are covered by 76 emulator-based tests.
 
 Deeper docs: [architecture](docs/architecture.md) · [sync design](docs/sync.md) · [sync logic reference](SYNC_LOGIC.md) · [backup format](docs/encrypted-backup-fhb.md) · [CI gates](docs/ci.md).
 
@@ -116,7 +116,7 @@ npm test --prefix firestore-rules-tests
 - **android-unit** — unit tests, debug APK assembly, native 16 KiB page-size guard, Room schema-drift guard, EN/RU locale parity guard (builds use the placeholder Firebase config).
 - **firebase-config** — detects whether the `GOOGLE_SERVICES_JSON` repository secret is configured.
 - **android-instrumented** — emulator API 35 run with a strict result verifier. Executes only when the secret is available (maintainer setup); forks without the secret skip this job.
-- **firestore-rules** — all 67 rules tests against the local Firestore emulator (`demo-familyhub` project, no credentials needed).
+- **firestore-rules** — all 76 rules tests against the local Firestore emulator (`demo-familyhub` project, no credentials needed).
 
 ## Localization
 

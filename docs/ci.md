@@ -34,7 +34,7 @@ bash .github/scripts/verify-native-page-size.sh app/build/outputs/apk/debug/app-
 bash .github/scripts/guard-room-schema-drift.sh
 npm ci --prefix firestore-rules-tests
 npm test --prefix firestore-rules-tests
-bash .github/scripts/verify-firestore-test-results.sh firestore-test.log 67
+bash .github/scripts/verify-firestore-test-results.sh firestore-test.log 76
 ```
 
 Verifier self-tests:
@@ -107,7 +107,7 @@ Self-tests (`--self-test`) cover passing and failing ELF fixtures without an SDK
 - No Firebase tokens, service accounts, or deploy commands.
 - `firebase emulators:exec` wraps `node --test`.
 - The Firestore verifier reads counters only from the **last** Node test summary block in the log (not earlier blocks from prior runs or emulator boot output).
-- CI requires `tests == pass == 67` and `fail == skipped == cancelled == todo == 0`.
+- CI requires `tests == pass == 76` and `fail == skipped == cancelled == todo == 0`.
 - Missing counters in the latest block, or `66 pass + 1 skipped`, fail even if an earlier complete `67/67` summary appears earlier in the log.
 
 Node prints summary lines such as `ℹ tests 67` (info prefix, not `#`).
