@@ -17,8 +17,6 @@ concurrency:
 jobs:
   android-unit:
     name: Android unit + build + schema drift
-    # ubuntu-24.04 ships the Android SDK with sdkmanager on PATH;
-    # ubuntu-latest (26.04) no longer preinstalls it.
     runs-on: ubuntu-24.04
     timeout-minutes: 45
 
@@ -49,10 +47,23 @@ jobs:
         with:
           validate-wrappers: true
 
+      - name: Install Android cmdline-tools
+        # Runner images no longer ship the Android SDK; install it explicitly.
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/android-sdk/cmdline-tools"
+          curl -fsSL -o "$RUNNER_TEMP/clt.zip" https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
+          unzip -q "$RUNNER_TEMP/clt.zip" -d "$HOME/android-sdk/cmdline-tools"
+          mv "$HOME/android-sdk/cmdline-tools/cmdline-tools" "$HOME/android-sdk/cmdline-tools/latest"
+          echo "ANDROID_HOME=$HOME/android-sdk" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$HOME/android-sdk" >> "$GITHUB_ENV"
+          echo "$HOME/android-sdk/cmdline-tools/latest/bin" >> "$GITHUB_PATH"
+          echo "$HOME/android-sdk/platform-tools" >> "$GITHUB_PATH"
+
       - name: Install Android SDK platform 35
         run: |
           yes | sdkmanager --licenses >/dev/null 2>&1 || true
-          sdkmanager "platforms;android-35" "build-tools;35.0.0"
+          sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
 
       - name: Make Gradle wrapper executable
         run: chmod +x gradlew
@@ -137,10 +148,23 @@ jobs:
         with:
           validate-wrappers: true
 
+      - name: Install Android cmdline-tools
+        # Runner images no longer ship the Android SDK; install it explicitly.
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/android-sdk/cmdline-tools"
+          curl -fsSL -o "$RUNNER_TEMP/clt.zip" https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
+          unzip -q "$RUNNER_TEMP/clt.zip" -d "$HOME/android-sdk/cmdline-tools"
+          mv "$HOME/android-sdk/cmdline-tools/cmdline-tools" "$HOME/android-sdk/cmdline-tools/latest"
+          echo "ANDROID_HOME=$HOME/android-sdk" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$HOME/android-sdk" >> "$GITHUB_ENV"
+          echo "$HOME/android-sdk/cmdline-tools/latest/bin" >> "$GITHUB_PATH"
+          echo "$HOME/android-sdk/platform-tools" >> "$GITHUB_PATH"
+
       - name: Install Android SDK platform 35
         run: |
           yes | sdkmanager --licenses >/dev/null 2>&1 || true
-          sdkmanager "platforms;android-35" "build-tools;35.0.0"
+          sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0" "emulator" "system-images;android-35;google_apis;x86_64"
 
       - name: Make Gradle wrapper executable
         run: chmod +x gradlew
