@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_redesign_title">Сегодня</string>
+    <string name="home_redesign_greeting">Рады видеть, %1$s!</string>
+    <string name="home_redesign_week_score">Баллы за неделю: %1$d</string>
+    <string name="home_redesign_week_score_negative_cd">Узнать, почему баллы уменьшились за неделю</string>
+    <string name="home_redesign_week_score_negative_explanation">Баллы могут уменьшаться, если задачи не выполнены или назначены списания баллов.</string>
+    <string name="home_redesign_family_members_cd">Члены семьи: %1$s</string>
+    <string name="home_redesign_shopping_title">Покупки</string>
+    <string name="home_redesign_shopping_loading">Проверяем список покупок…</string>
+    <plurals name="home_redesign_shopping_remaining">
+        <item quantity="one">Осталось купить %1$d товар</item>
+        <item quantity="few">Осталось купить %1$d товара</item>
+        <item quantity="many">Осталось купить %1$d товаров</item>
+        <item quantity="other">Осталось купить %1$d товара</item>
+    </plurals>
+    <string name="home_redesign_open_shopping">Открыть список</string>
+    <string name="home_redesign_food_title">Еда</string>
+    <string name="home_redesign_food_loading">Проверяем меню на сегодня…</string>
+    <plurals name="home_redesign_food_meals_today">
+        <item quantity="one">Сегодня запланировано %1$d блюдо</item>
+        <item quantity="few">Сегодня запланировано %1$d блюда</item>
+        <item quantity="many">Сегодня запланировано %1$d блюд</item>
+        <item quantity="other">Сегодня запланировано %1$d блюда</item>
+    </plurals>
+    <string name="home_redesign_open_food">Спланировать</string>
+    <string name="home_redesign_priority_tasks">На сегодня</string>
+    <string name="home_redesign_show_all">Все задачи</string>
+    <plurals name="home_redesign_more_tasks">
+        <item quantity="one">Ещё %1$d задача</item>
+        <item quantity="few">Ещё %1$d задачи</item>
+        <item quantity="many">Ещё %1$d задач</item>
+        <item quantity="other">Ещё %1$d задачи</item>
+    </plurals>
+    <string name="home_redesign_task_support_with_points">%1$s · %2$d баллов</string>
+    <string name="home_redesign_task_today">Сегодня</string>
+    <plurals name="home_redesign_task_overdue_days">
+        <item quantity="one">Просрочено на %1$d день</item>
+        <item quantity="few">Просрочено на %1$d дня</item>
+        <item quantity="many">Просрочено на %1$d дней</item>
+        <item quantity="other">Просрочено на %1$d дня</item>
+    </plurals>
+    <string name="home_redesign_upcoming_events">Скоро</string>
+    <string name="home_redesign_add_event">Добавить</string>
+
+    <string name="food_hub_title">Еда</string>
+    <string name="food_hub_intro_title">Что будем готовить?</string>
+    <string name="food_hub_intro_subtitle">Спланируйте неделю или выберите проверенный семейный рецепт.</string>
+    <string name="food_hub_weekly_menu_title">Меню недели</string>
+    <string name="food_hub_weekly_menu_subtitle">Запланируйте завтраки, обеды и ужины для всей семьи.</string>
+    <string name="food_hub_open_weekly_menu">Открыть меню</string>
+    <string name="food_hub_recipes_title">Книга рецептов</string>
+    <string name="food_hub_recipes_subtitle">Сохраняйте любимые блюда и быстро добавляйте их в меню.</string>
+    <string name="food_hub_open_recipes">Посмотреть рецепты</string>
+    <string name="food_hub_today_title">Сегодня в меню</string>
+    <string name="food_hub_recipe_preview_title">Семейные рецепты</string>
+    <string name="food_hub_today_empty">На сегодня пока ничего не запланировано.</string>
+    <string name="food_hub_plan_today">Запланировать</string>
+    <string name="food_hub_recipes_empty">Добавьте первый семейный рецепт.</string>
+    <string name="food_hub_meal_snack">Перекус</string>
+    <string name="food_hub_recipe_time">%1$d мин</string>
+    <string name="food_hub_recipe_card_cd">%1$s, время приготовления %2$d минут</string>
+    <string name="food_hub_favorite_recipe_cd">Любимый рецепт</string>
+    <string name="food_hub_illustration_cd">Семья вместе планирует и готовит еду</string>
+</resources>

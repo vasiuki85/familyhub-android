@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="validation_event_title_empty">Введите название события</string>
+    <string name="validation_event_duration_invalid">Укажите длительность больше 0 минут</string>
+    <string name="validation_reward_title_empty">Введите название награды</string>
+    <string name="validation_reward_cost_invalid">Укажите стоимость 0 или больше</string>
+    <string name="validation_penalty_member_required">Выберите участника семьи</string>
+    <string name="validation_penalty_amount_required">Укажите сумму списания</string>
+    <string name="validation_recipe_title_empty">Введите название рецепта</string>
+    <string name="validation_member_name_empty">Введите имя участника</string>
+    <string name="validation_appreciation_message_empty">Введите текст благодарности</string>
+</resources>

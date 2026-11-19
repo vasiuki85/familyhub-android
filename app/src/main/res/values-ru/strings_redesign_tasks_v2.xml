@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_v2_filter_chip">Статус: %1$s</string>
+    <string name="tasks_v2_sort_chip">Сортировка: %1$s</string>
+    <string name="tasks_v2_filter_sheet_title">Какие задачи показать</string>
+    <string name="tasks_v2_sort_sheet_title">Как упорядочить задачи</string>
+    <string name="tasks_v2_create_category_action">Новая категория</string>
+    <string name="tasks_v2_create_category_title">Создать категорию</string>
+    <string name="tasks_v2_templates_title">Шаблон задачи</string>
+    <string name="tasks_v2_settings_title">Настройки задачи</string>
+    <string name="tasks_v2_empty_illustration_cd">Семья вместе планирует задачи</string>
+    <string name="rating_v2_empty_illustration_cd">Семья вместе радуется прогрессу</string>
+    <string name="tasks_pending_read_only_hint">Задачи доступны только для просмотра, пока участие в семье не одобрено.</string>
+    <string name="tasks_error_create_permission">У вас нет прав на создание этой задачи.</string>
+    <string name="tasks_error_configuration_permission">Управлять шаблонами, категориями и ротацией задач может только родитель или администратор.</string>
+    <string name="tasks_template_delete_title">Удалить шаблон задачи?</string>
+    <string name="tasks_template_delete_message">Шаблон «%1$s» будет удалён без возможности восстановления. Существующие задачи не изменятся.</string>
+    <string name="tasks_tab_awaiting_badge">%1$s %2$d</string>
+    <string name="tasks_search_filter_cd">Поиск задач</string>
+    <string name="tasks_search_sheet_title">Поиск</string>
+    <string name="tasks_category_sheet_title">Категория</string>
+    <string name="task_more_actions_cd">Дополнительные действия: %1$s</string>
+    <string name="task_meta_separator"> · </string>
+    <string name="task_list_assignee_due_format">%1$s · %2$s</string>
+</resources>

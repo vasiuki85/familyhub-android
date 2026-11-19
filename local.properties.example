@@ -1,0 +1,6 @@
+## Copy to local.properties and adjust paths for your machine.
+## Never commit local.properties — it contains machine-specific paths and secrets.
+#
+# sdk.dir=C\:\\Users\\YOU\\AppData\\Local\\Android\\Sdk
+# storePassword=your-release-store-password
+# keyPassword=your-release-key-password

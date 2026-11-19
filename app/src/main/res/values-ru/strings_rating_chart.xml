@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rating_trend_chart_content_description">График баллов от %1$d до %2$d за %3$d недель</string>
+</resources>

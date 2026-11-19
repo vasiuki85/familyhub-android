@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_operation_failed">Не удалось выполнить действие. Повторите позже.</string>
+    <string name="error_load_failed">Не удалось загрузить данные. Повторите позже.</string>
+    <string name="error_network_unavailable">Нет подключения к интернету. Проверьте соединение и повторите.</string>
+    <string name="error_permission_denied">Недостаточно прав для этого действия.</string>
+    <string name="error_task_create_failed">Не удалось создать задачу. Повторите позже.</string>
+    <string name="error_task_update_failed">Не удалось обновить задачу. Повторите позже.</string>
+    <string name="error_task_delete_failed">Не удалось удалить задачу. Повторите позже.</string>
+    <string name="error_task_order_failed">Не удалось изменить порядок задач. Повторите позже.</string>
+    <string name="error_shopping_add_failed">Не удалось добавить товар. Повторите позже.</string>
+    <string name="error_shopping_update_failed">Не удалось обновить товар. Повторите позже.</string>
+    <string name="error_shopping_delete_failed">Не удалось удалить товар. Повторите позже.</string>
+    <string name="error_shopping_list_create_failed">Не удалось создать список покупок. Повторите позже.</string>
+    <string name="error_shopping_list_update_failed">Не удалось обновить список покупок. Повторите позже.</string>
+    <string name="error_shopping_list_delete_failed">Не удалось удалить список покупок. Повторите позже.</string>
+    <string name="error_shopping_category_create_failed">Не удалось создать категорию. Повторите позже.</string>
+    <string name="error_shopping_category_update_failed">Не удалось обновить категорию. Повторите позже.</string>
+    <string name="error_shopping_category_delete_failed">Не удалось удалить категорию. Повторите позже.</string>
+    <string name="error_event_create_failed">Не удалось создать событие. Повторите позже.</string>
+    <string name="error_event_update_failed">Не удалось обновить событие. Повторите позже.</string>
+    <string name="error_event_delete_failed">Не удалось удалить событие. Повторите позже.</string>
+    <string name="error_user_switch_failed">Не удалось сменить пользователя. Повторите позже.</string>
+    <string name="error_export_failed">Не удалось экспортировать данные. Повторите позже.</string>
+    <string name="error_backup_failed">Не удалось создать резервную копию. Повторите позже.</string>
+    <string name="error_calendar_sync_failed">Не удалось синхронизировать календарь. Проверьте доступ к Google Calendar.</string>
+    <string name="error_menu_operation_failed">Не удалось выполнить действие с меню. Повторите позже.</string>
+    <string name="error_recipe_operation_failed">Не удалось выполнить действие с рецептом. Повторите позже.</string>
+    <string name="error_rewards_operation_failed">Не удалось выполнить действие с наградами. Повторите позже.</string>
+    <string name="error_rules_load_failed">Не удалось загрузить правила. Повторите позже.</string>
+    <string name="error_rules_create_failed">Не удалось создать правило. Повторите позже.</string>
+    <string name="error_rules_update_failed">Не удалось обновить правило. Повторите позже.</string>
+    <string name="error_rules_delete_failed">Не удалось удалить правило. Повторите позже.</string>
+    <string name="error_appreciations_load_failed">Не удалось загрузить благодарности. Повторите позже.</string>
+    <string name="error_appreciations_create_failed">Не удалось отправить благодарность. Повторите позже.</string>
+    <string name="error_appreciations_delete_failed">Не удалось удалить благодарность. Повторите позже.</string>
+    <string name="error_goals_operation_failed">Не удалось выполнить действие с целью. Повторите позже.</string>
+    <string name="error_contacts_operation_failed">Не удалось выполнить действие с контактом. Повторите позже.</string>
+    <string name="error_profile_save_failed">Не удалось сохранить профиль. Повторите позже.</string>
+    <string name="error_awesomeness_operation_failed">Не удалось выполнить действие. Повторите позже.</string>
+</resources>

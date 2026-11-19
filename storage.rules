@@ -1,0 +1,27 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    function memberRole(familyId) {
+      return firestore.get(/databases/(default)/documents/families/$(familyId)/members/$(request.auth.uid)).data.role;
+    }
+
+    function isActiveMember(familyId) {
+      return request.auth != null
+        && firestore.exists(/databases/(default)/documents/families/$(familyId)/members/$(request.auth.uid))
+        && memberRole(familyId) in ['ADMIN', 'PARENT', 'CHILD'];
+    }
+
+    match /families/{familyId}/members/{memberId}/avatar.jpg {
+      allow read: if isActiveMember(familyId);
+      allow write: if request.auth != null
+        && request.auth.uid == memberId
+        && isActiveMember(familyId)
+        && request.resource.size < 5 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+      allow delete: if request.auth != null
+        && request.auth.uid == memberId
+        && isActiveMember(familyId);
+    }
+  }
+}

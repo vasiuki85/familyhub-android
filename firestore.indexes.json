@@ -1,0 +1,29 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "tasks",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "private", "order": "ASCENDING" },
+        { "fieldPath": "createdByUserId", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "tasks",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "private", "order": "ASCENDING" },
+        { "fieldPath": "assignedToUserId", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "family_goals",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "personal", "order": "ASCENDING" },
+        { "fieldPath": "createdByUserId", "order": "ASCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

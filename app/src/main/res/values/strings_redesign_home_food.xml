@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_redesign_title">Today</string>
+    <string name="home_redesign_greeting">Good to see you, %1$s!</string>
+    <string name="home_redesign_week_score">Points this week: %1$d</string>
+    <string name="home_redesign_week_score_negative_cd">Learn why points went down this week</string>
+    <string name="home_redesign_week_score_negative_explanation">Points can go down when tasks are missed or point deductions are applied.</string>
+    <string name="home_redesign_family_members_cd">Family members: %1$s</string>
+    <string name="home_redesign_shopping_title">Shopping</string>
+    <string name="home_redesign_shopping_loading">Checking your shopping list…</string>
+    <plurals name="home_redesign_shopping_remaining">
+        <item quantity="one">%1$d item left to buy</item>
+        <item quantity="other">%1$d items left to buy</item>
+    </plurals>
+    <string name="home_redesign_open_shopping">Open list</string>
+    <string name="home_redesign_food_title">Food</string>
+    <string name="home_redesign_food_loading">Checking today\'s menu…</string>
+    <plurals name="home_redesign_food_meals_today">
+        <item quantity="one">%1$d meal planned today</item>
+        <item quantity="other">%1$d meals planned today</item>
+    </plurals>
+    <string name="home_redesign_open_food">Plan meals</string>
+    <string name="home_redesign_priority_tasks">For today</string>
+    <string name="home_redesign_show_all">All tasks</string>
+    <plurals name="home_redesign_more_tasks">
+        <item quantity="one">%1$d more task</item>
+        <item quantity="other">%1$d more tasks</item>
+    </plurals>
+    <string name="home_redesign_task_support_with_points">%1$s · %2$d points</string>
+    <string name="home_redesign_task_today">Today</string>
+    <plurals name="home_redesign_task_overdue_days">
+        <item quantity="one">Overdue by %1$d day</item>
+        <item quantity="other">Overdue by %1$d days</item>
+    </plurals>
+    <string name="home_redesign_upcoming_events">Coming up</string>
+    <string name="home_redesign_add_event">Add</string>
+
+    <string name="food_hub_title">Food</string>
+    <string name="food_hub_intro_title">What shall we cook?</string>
+    <string name="food_hub_intro_subtitle">Plan the week or pick a tried-and-tested family recipe.</string>
+    <string name="food_hub_weekly_menu_title">Weekly menu</string>
+    <string name="food_hub_weekly_menu_subtitle">Plan breakfasts, lunches and dinners for the whole family.</string>
+    <string name="food_hub_open_weekly_menu">Open menu</string>
+    <string name="food_hub_recipes_title">Recipe book</string>
+    <string name="food_hub_recipes_subtitle">Save favourite dishes and quickly add them to the menu.</string>
+    <string name="food_hub_open_recipes">Browse recipes</string>
+    <string name="food_hub_today_title">Today’s menu</string>
+    <string name="food_hub_recipe_preview_title">Family recipes</string>
+    <string name="food_hub_today_empty">Nothing is planned for today yet.</string>
+    <string name="food_hub_plan_today">Plan</string>
+    <string name="food_hub_recipes_empty">Add a first family recipe.</string>
+    <string name="food_hub_meal_snack">Snack</string>
+    <string name="food_hub_recipe_time">%1$d min</string>
+    <string name="food_hub_recipe_card_cd">%1$s, cooking time %2$d minutes</string>
+    <string name="food_hub_favorite_recipe_cd">Favourite recipe</string>
+    <string name="food_hub_illustration_cd">A family planning and cooking a meal together</string>
+</resources>

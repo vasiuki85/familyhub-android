@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="shopping_module_progress_title">List progress</string>
+    <string name="shopping_module_progress_remaining">%1$d left to buy</string>
+    <string name="shopping_quick_add_heading">Quick add</string>
+    <string name="shopping_quick_add_row_cd">Quick add items</string>
+    <string name="shopping_module_progress_complete">Everything is bought</string>
+    <string name="shopping_item_more_actions">More actions for %1$s</string>
+</resources>

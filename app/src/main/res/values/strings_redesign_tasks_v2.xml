@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_v2_filter_chip">Status: %1$s</string>
+    <string name="tasks_v2_sort_chip">Sort: %1$s</string>
+    <string name="tasks_v2_filter_sheet_title">Show tasks</string>
+    <string name="tasks_v2_sort_sheet_title">Sort tasks</string>
+    <string name="tasks_v2_create_category_action">New category</string>
+    <string name="tasks_v2_create_category_title">Create a category</string>
+    <string name="tasks_v2_templates_title">Task template</string>
+    <string name="tasks_v2_settings_title">Task settings</string>
+    <string name="tasks_v2_empty_illustration_cd">A family planning tasks together</string>
+    <string name="rating_v2_empty_illustration_cd">A family celebrating progress together</string>
+    <string name="tasks_pending_read_only_hint">Tasks are read-only until your family membership is approved.</string>
+    <string name="tasks_error_create_permission">You do not have permission to create this task.</string>
+    <string name="tasks_error_configuration_permission">Only a parent or administrator can manage task templates, categories, and rotations.</string>
+    <string name="tasks_template_delete_title">Delete task template?</string>
+    <string name="tasks_template_delete_message">The template “%1$s” will be permanently deleted. Existing tasks will not be changed.</string>
+    <string name="tasks_tab_awaiting_badge">%1$s %2$d</string>
+    <string name="tasks_search_filter_cd">Search tasks</string>
+    <string name="tasks_search_sheet_title">Search</string>
+    <string name="tasks_category_sheet_title">Category</string>
+    <string name="task_more_actions_cd">More actions for %1$s</string>
+    <string name="task_meta_separator"> · </string>
+    <string name="task_list_assignee_due_format">%1$s · %2$s</string>
+</resources>

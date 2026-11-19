@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="edit_profile_unavailable_title">Профиль недоступен</string>
+    <string name="edit_profile_unavailable_body">Этот участник семьи больше не существует или его профиль нельзя открыть.</string>
+    <string name="edit_profile_back_action">Вернуться назад</string>
+    <string name="edit_profile_load_failed_title">Не удалось загрузить профиль</string>
+    <string name="edit_profile_load_failed_body">Проверьте локальные данные и попробуйте снова. Ничего не было изменено.</string>
+    <string name="edit_profile_retry_action">Попробовать снова</string>
+</resources>

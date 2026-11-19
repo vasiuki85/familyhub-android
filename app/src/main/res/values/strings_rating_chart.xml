@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rating_trend_chart_content_description">Score chart from %1$d to %2$d over %3$d weeks</string>
+</resources>

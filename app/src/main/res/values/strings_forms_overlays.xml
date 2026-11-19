@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="task_due_clear_cd">Clear due date</string>
+    <string name="task_due_time_label">Due time</string>
+    <string name="task_due_time_not_set">No time set</string>
+    <string name="task_due_time_clear_cd">Clear due time</string>
+    <string name="task_reminder_label">Reminder</string>
+    <string name="task_reminder_none">None</string>
+    <string name="task_reminder_at_due">At due time</string>
+    <string name="task_reminder_one_hour_before">1 hour before</string>
+    <string name="task_reminder_at_time">At %1$s</string>
+    <string name="task_reminder_at_time_option">At chosen time</string>
+    <string name="task_reminder_set_time">Set reminder time</string>
+    <string name="task_reminder_time_pick_cd">Pick reminder time</string>
+    <string name="task_category_color_option_cd">Category color %1$d of %2$d</string>
+    <string name="password_show_cd">Show password</string>
+    <string name="password_hide_cd">Hide password</string>
+    <string name="settings_member_dialog_avatar_color_option">Avatar color %1$d</string>
+    <string name="settings_family_qr_cd">QR code for joining the family</string>
+    <string name="encrypted_backup_preview_count_members">Members</string>
+    <string name="encrypted_backup_preview_count_tasks">Tasks</string>
+    <string name="encrypted_backup_preview_count_shopping_lists">Shopping lists</string>
+    <string name="encrypted_backup_preview_count_shopping_items">Shopping items</string>
+    <string name="encrypted_backup_preview_count_events">Events</string>
+    <string name="encrypted_backup_preview_count_recipes">Recipes</string>
+    <string name="encrypted_backup_preview_count_goals">Goals</string>
+    <string name="encrypted_backup_preview_count_rewards">Rewards</string>
+    <string name="encrypted_backup_preview_count_penalties">Point deductions</string>
+    <string name="encrypted_backup_preview_count_menus">Menus</string>
+    <string name="encrypted_backup_preview_count_templates">Templates</string>
+    <string name="encrypted_backup_adding_profile_title">Adding profile</string>
+    <string name="settings_sync_safe_error">Sync did not finish. Try again when the connection is stable.</string>
+</resources>

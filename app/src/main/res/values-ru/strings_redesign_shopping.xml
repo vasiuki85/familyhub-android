@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="shopping_module_progress_title">Прогресс списка</string>
+    <string name="shopping_module_progress_remaining">Осталось купить %1$d</string>
+    <string name="shopping_quick_add_heading">Быстро добавить</string>
+    <string name="shopping_quick_add_row_cd">Быстро добавить товары</string>
+    <string name="shopping_module_progress_complete">Всё куплено</string>
+    <string name="shopping_item_more_actions">Другие действия для товара «%1$s»</string>
+</resources>

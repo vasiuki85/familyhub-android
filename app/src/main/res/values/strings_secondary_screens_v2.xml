@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calendar_error_load">Couldn’t load the calendar. Try again.</string>
+    <string name="calendar_error_save">Couldn’t save the event. Try again.</string>
+    <string name="secondary_actions_cd">More actions</string>
+    <string name="secondary_action_edit">Edit</string>
+    <string name="secondary_action_delete">Delete</string>
+
+    <string name="penalties_empty_title">No point deductions yet</string>
+    <string name="penalties_empty_body">Family agreements are going well. New deductions will appear here.</string>
+    <string name="penalties_cancel_confirm_title">Cancel this point deduction?</string>
+    <string name="penalties_cancel_confirm_body">The points will be returned to the family member.</string>
+    <string name="penalties_member_picker_cd">Choose a family member</string>
+    <string name="penalties_no_eligible_members">There are no approved family members available for a deduction.</string>
+    <string name="penalties_read_only_hint">Only a parent or administrator can add or cancel point deductions.</string>
+    <string name="penalties_error_target_missing">The selected family member is no longer available.</string>
+    <string name="penalties_error_target_pending">Wait until this family member is approved before adding a point deduction.</string>
+
+    <string name="calendar_sync_empty_title">No calendars available</string>
+    <string name="calendar_sync_empty_body">Check calendar access in your Google account and try again.</string>
+
+    <string name="weekly_report_unavailable_title">The report is not ready yet</string>
+    <string name="weekly_report_unavailable_body">Try loading this week again. Your family data remains unchanged.</string>
+    <string name="contacts_error_load">Could not load emergency contacts: %1$s</string>
+    <string name="contacts_empty_manage_hint">Add the people your family may need to call quickly.</string>
+    <string name="contacts_read_only_hint">Only a parent or family administrator can manage emergency contacts.</string>
+    <string name="stats_chart_not_enough_data">Not enough data for a chart</string>
+</resources>

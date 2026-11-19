@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="edit_profile_unavailable_title">Profile unavailable</string>
+    <string name="edit_profile_unavailable_body">This family member no longer exists or cannot be opened.</string>
+    <string name="edit_profile_back_action">Go back</string>
+    <string name="edit_profile_load_failed_title">Could not load the profile</string>
+    <string name="edit_profile_load_failed_body">Check the local data and try again. Nothing has been changed.</string>
+    <string name="edit_profile_retry_action">Try again</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Минимальный набор переводов для Настроек (остальные возьмутся из EN) -->
+    <string name="settings_theme_constructor_title">Цвета темы</string>
+    <string name="settings_theme_constructor_desc">Выберите основные цвета (primary/secondary/tertiary) из палитры. Можно сбросить по умолчанию.</string>
+    <string name="settings_theme_primary_label">Основной (Primary)</string>
+    <string name="settings_theme_secondary_label">Дополнительный (Secondary)</string>
+    <string name="settings_theme_tertiary_label">Акцентный (Tertiary)</string>
+    <string name="settings_theme_color_invalid">Неверный формат цвета (#RRGGBB)</string>
+    <string name="settings_theme_clear_color">Очистить поле</string>
+    <string name="settings_theme_hue_label">Оттенок: %1$d°</string>
+    <string name="settings_theme_apply_button">Применить</string>
+    <string name="settings_theme_reset_button">Сбросить</string>
+</resources>

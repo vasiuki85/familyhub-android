@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_group_overdue">Overdue</string>
+    <string name="task_overdue_badge">Overdue</string>
+    <string name="tasks_group_today">Today</string>
+    <string name="tasks_group_tomorrow">Tomorrow</string>
+    <string name="tasks_group_later">Later</string>
+    <string name="tasks_group_no_date">No due date</string>
+    <string name="tasks_group_todo">To do</string>
+    <string name="tasks_group_waiting">Awaiting approval</string>
+    <string name="tasks_group_done">Done</string>
+    <string name="tasks_group_count">%1$d</string>
+    <string name="tasks_filters_section_title">Search and filters</string>
+    <string name="tasks_editor_essentials_title">Essentials</string>
+    <string name="tasks_editor_additional">More options</string>
+    <string name="tasks_editor_additional_expanded_cd">Hide additional options</string>
+    <string name="tasks_editor_additional_collapsed_cd">Show additional options</string>
+    <string name="tasks_editor_close_cd">Close task editor</string>
+    <string name="tasks_editor_save_cd">Save task</string>
+    <string name="rewards_hero_title">Earn points together</string>
+    <string name="rewards_hero_subtitle">Pick a fun goal and track your progress</string>
+    <string name="rewards_progress_remaining">%1$d points to go</string>
+    <string name="rewards_progress_ready">Reward unlocked!</string>
+    <string name="rewards_progress_cd">%1$d of %2$d points earned</string>
+    <string name="rewards_catalog_item_cd">%1$s, costs %2$d points</string>
+    <string name="rewards_inactive_friendly_hint">This reward is paused for now</string>
+    <string name="rewards_tab_catalog">Catalog</string>
+    <string name="rewards_tab_my_requests">My requests</string>
+    <string name="rewards_tab_received">Received</string>
+    <string name="rewards_tab_pending_review">Pending review</string>
+    <string name="rewards_tab_pending_badge">%1$s %2$d</string>
+    <string name="rewards_empty_title">No rewards yet</string>
+    <string name="rewards_empty_description">Create your first family reward</string>
+    <string name="rewards_empty_catalog_member">Rewards will appear here when a parent adds them</string>
+    <string name="rewards_edit_cd">Edit reward</string>
+    <string name="rewards_edit_dialog_title">Manage reward</string>
+    <string name="rewards_edit_action">Manage</string>
+    <string name="rewards_requests_empty">You have no reward requests yet</string>
+    <string name="rewards_received_empty">No rewards received yet</string>
+    <string name="rewards_pending_empty">No requests awaiting review</string>
+</resources>

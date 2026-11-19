@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="task_due_clear_cd">Очистить срок задачи</string>
+    <string name="task_due_time_label">Время</string>
+    <string name="task_due_time_not_set">Без времени</string>
+    <string name="task_due_time_clear_cd">Очистить время</string>
+    <string name="task_reminder_label">Напоминание</string>
+    <string name="task_reminder_none">Нет</string>
+    <string name="task_reminder_at_due">В срок</string>
+    <string name="task_reminder_one_hour_before">За 1 час</string>
+    <string name="task_reminder_at_time">В %1$s</string>
+    <string name="task_reminder_at_time_option">В выбранное время</string>
+    <string name="task_reminder_set_time">Указать время напоминания</string>
+    <string name="task_reminder_time_pick_cd">Выбрать время напоминания</string>
+    <string name="task_category_color_option_cd">Цвет категории %1$d из %2$d</string>
+    <string name="password_show_cd">Показать пароль</string>
+    <string name="password_hide_cd">Скрыть пароль</string>
+    <string name="settings_member_dialog_avatar_color_option">Цвет аватара %1$d</string>
+    <string name="settings_family_qr_cd">QR-код для присоединения к семье</string>
+    <string name="encrypted_backup_preview_count_members">Участники</string>
+    <string name="encrypted_backup_preview_count_tasks">Задачи</string>
+    <string name="encrypted_backup_preview_count_shopping_lists">Списки покупок</string>
+    <string name="encrypted_backup_preview_count_shopping_items">Товары</string>
+    <string name="encrypted_backup_preview_count_events">События</string>
+    <string name="encrypted_backup_preview_count_recipes">Рецепты</string>
+    <string name="encrypted_backup_preview_count_goals">Цели</string>
+    <string name="encrypted_backup_preview_count_rewards">Награды</string>
+    <string name="encrypted_backup_preview_count_penalties">Списания баллов</string>
+    <string name="encrypted_backup_preview_count_menus">Меню</string>
+    <string name="encrypted_backup_preview_count_templates">Шаблоны</string>
+    <string name="encrypted_backup_adding_profile_title">Добавление профиля</string>
+    <string name="settings_sync_safe_error">Синхронизация не завершилась. Повторите попытку при стабильном соединении.</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auth_v2_subtitle">One calm place for your family’s plans</string>
+    <string name="auth_v2_show_password_cd">Show password</string>
+    <string name="auth_v2_hide_password_cd">Hide password</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calendar_error_load">Не удалось загрузить календарь. Попробуйте снова.</string>
+    <string name="calendar_error_save">Не удалось сохранить событие. Попробуйте снова.</string>
+    <string name="secondary_actions_cd">Другие действия</string>
+    <string name="secondary_action_edit">Изменить</string>
+    <string name="secondary_action_delete">Удалить</string>
+
+    <string name="penalties_empty_title">Списаний баллов пока нет</string>
+    <string name="penalties_empty_body">Семейные договорённости соблюдаются. Новые списания появятся здесь.</string>
+    <string name="penalties_cancel_confirm_title">Отменить это списание баллов?</string>
+    <string name="penalties_cancel_confirm_body">Списанные баллы вернутся участнику семьи.</string>
+    <string name="penalties_member_picker_cd">Выбрать участника семьи</string>
+    <string name="penalties_no_eligible_members">Нет одобренных участников семьи, которым можно назначить списание.</string>
+    <string name="penalties_read_only_hint">Добавлять и отменять списания может только родитель или администратор.</string>
+    <string name="penalties_error_target_missing">Выбранный участник семьи больше недоступен.</string>
+    <string name="penalties_error_target_pending">Дождитесь одобрения участника семьи, прежде чем назначать списание.</string>
+
+    <string name="calendar_sync_empty_title">Нет доступных календарей</string>
+    <string name="calendar_sync_empty_body">Проверьте доступ к календарям в аккаунте Google и попробуйте снова.</string>
+
+    <string name="weekly_report_unavailable_title">Отчёт пока не готов</string>
+    <string name="weekly_report_unavailable_body">Попробуйте загрузить эту неделю ещё раз. Семейные данные не изменятся.</string>
+    <string name="contacts_error_load">Не удалось загрузить экстренные контакты: %1$s</string>
+    <string name="contacts_empty_manage_hint">Добавьте людей, которым семье может понадобиться быстро позвонить.</string>
+    <string name="contacts_read_only_hint">Экстренными контактами может управлять только родитель или администратор семьи.</string>
+    <string name="stats_chart_not_enough_data">Недостаточно данных для графика</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="validation_event_title_empty">Enter an event title</string>
+    <string name="validation_event_duration_invalid">Enter a duration greater than 0 minutes</string>
+    <string name="validation_reward_title_empty">Enter a reward title</string>
+    <string name="validation_reward_cost_invalid">Enter a cost of 0 or more</string>
+    <string name="validation_penalty_member_required">Select a family member</string>
+    <string name="validation_penalty_amount_required">Enter a deduction amount</string>
+    <string name="validation_recipe_title_empty">Enter a recipe title</string>
+    <string name="validation_member_name_empty">Enter a member name</string>
+    <string name="validation_appreciation_message_empty">Enter appreciation text</string>
+</resources>

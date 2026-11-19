@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calendar_sync_grant_scope_button">Разрешить доступ к календарю</string>
+    <string name="calendar_sync_grant_scope_message">Для загрузки списков календарей требуется доступ к Google Календарю. Пожалуйста, разрешите доступ.</string>
+    <string name="calendar_sync_done">Синхронизация выполнена</string>
+    <string name="calendar_sync_error_sign_in_detailed">Вход через Google не удался: %1$s (%2$d)</string>
+</resources>

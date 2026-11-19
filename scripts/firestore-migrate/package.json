@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audit": "node migrate.mjs audit",
+    "apply": "node migrate.mjs apply",
+    "test": "node --test migrate.test.mjs"
+  },
+  "dependencies": {
+    "firebase-admin": "13.6.0"
+  }
+}

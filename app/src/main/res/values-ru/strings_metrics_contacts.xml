@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="metrics_tasks_label">Задачи</string>
+    <string name="metrics_earned_label">Заработано</string>
+    <string name="metrics_deducted_label">Списано</string>
+    <string name="metrics_balance_label">Баланс</string>
+    <string name="contacts_section_emergency_services">Экстренные службы</string>
+    <string name="contacts_section_personal">Семья и близкие</string>
+    <string name="contacts_call_name_cd">Позвонить %1$s</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_operation_failed">Could not complete the action. Try again later.</string>
+    <string name="error_load_failed">Could not load data. Try again later.</string>
+    <string name="error_network_unavailable">No internet connection. Check your network and try again.</string>
+    <string name="error_permission_denied">You do not have permission for this action.</string>
+    <string name="error_task_create_failed">Could not create the task. Try again later.</string>
+    <string name="error_task_update_failed">Could not update the task. Try again later.</string>
+    <string name="error_task_delete_failed">Could not delete the task. Try again later.</string>
+    <string name="error_task_order_failed">Could not reorder tasks. Try again later.</string>
+    <string name="error_shopping_add_failed">Could not add the item. Try again later.</string>
+    <string name="error_shopping_update_failed">Could not update the item. Try again later.</string>
+    <string name="error_shopping_delete_failed">Could not delete the item. Try again later.</string>
+    <string name="error_shopping_list_create_failed">Could not create the shopping list. Try again later.</string>
+    <string name="error_shopping_list_update_failed">Could not update the shopping list. Try again later.</string>
+    <string name="error_shopping_list_delete_failed">Could not delete the shopping list. Try again later.</string>
+    <string name="error_shopping_category_create_failed">Could not create the category. Try again later.</string>
+    <string name="error_shopping_category_update_failed">Could not update the category. Try again later.</string>
+    <string name="error_shopping_category_delete_failed">Could not delete the category. Try again later.</string>
+    <string name="error_event_create_failed">Could not create the event. Try again later.</string>
+    <string name="error_event_update_failed">Could not update the event. Try again later.</string>
+    <string name="error_event_delete_failed">Could not delete the event. Try again later.</string>
+    <string name="error_user_switch_failed">Could not switch user. Try again later.</string>
+    <string name="error_export_failed">Could not export data. Try again later.</string>
+    <string name="error_backup_failed">Could not create a backup. Try again later.</string>
+    <string name="error_calendar_sync_failed">Could not sync the calendar. Check Google Calendar access.</string>
+    <string name="error_menu_operation_failed">Could not complete the menu action. Try again later.</string>
+    <string name="error_recipe_operation_failed">Could not complete the recipe action. Try again later.</string>
+    <string name="error_rewards_operation_failed">Could not complete the reward action. Try again later.</string>
+    <string name="error_rules_load_failed">Could not load rules. Try again later.</string>
+    <string name="error_rules_create_failed">Could not create the rule. Try again later.</string>
+    <string name="error_rules_update_failed">Could not update the rule. Try again later.</string>
+    <string name="error_rules_delete_failed">Could not delete the rule. Try again later.</string>
+    <string name="error_appreciations_load_failed">Could not load appreciations. Try again later.</string>
+    <string name="error_appreciations_create_failed">Could not send the appreciation. Try again later.</string>
+    <string name="error_appreciations_delete_failed">Could not delete the appreciation. Try again later.</string>
+    <string name="error_goals_operation_failed">Could not complete the goal action. Try again later.</string>
+    <string name="error_contacts_operation_failed">Could not complete the contact action. Try again later.</string>
+    <string name="error_profile_save_failed">Could not save the profile. Try again later.</string>
+    <string name="error_awesomeness_operation_failed">Could not complete the action. Try again later.</string>
+</resources>

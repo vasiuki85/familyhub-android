@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="recipes_error_load">Couldn’t load recipes. Try again.</string>
+    <string name="shopping_v2_more_actions_cd">More shopping actions</string>
+    <string name="shopping_v2_switch_list_hint">Tap to switch list</string>
+
+    <string name="recipes_v2_clear_search_cd">Clear recipe search</string>
+    <string name="recipes_v2_empty_filtered">No recipes match these filters</string>
+    <string name="recipes_v2_more_actions_cd">More recipe actions</string>
+    <string name="recipes_v2_meta">%1$d min · %2$d servings</string>
+
+    <string name="menu_v2_week_heading">Week menu</string>
+    <string name="menu_v2_more_actions_cd">More menu actions</string>
+    <string name="recipes_v2_delete_title">Delete recipe?</string>
+    <string name="recipes_v2_delete_message">“%1$s” will be removed from the family recipe book.</string>
+    <string name="menu_v2_clear_title">Clear this week’s menu?</string>
+    <string name="menu_v2_clear_message">All planned meals for this week will be removed.</string>
+    <string name="menu_v2_read_only_title">Menu is read-only</string>
+    <string name="menu_v2_recipe_servings">%1$s · %2$d servings</string>
+    <string name="menu_meal_open_recipe">Open recipe</string>
+    <string name="menu_meal_replace_dish">Replace dish</string>
+    <string name="menu_meal_assign_cook">Assign someone else</string>
+    <string name="menu_meal_remove">Remove from menu</string>
+    <string name="menu_meal_more_actions_cd">More actions for %1$s</string>
+    <string name="menu_change_day_cook_cd">Change cook for this day</string>
+    <plurals name="menu_meal_servings">
+        <item quantity="one">%d serving</item>
+        <item quantity="other">%d servings</item>
+    </plurals>
+</resources>

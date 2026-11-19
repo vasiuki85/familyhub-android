@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="metrics_tasks_label">Tasks</string>
+    <string name="metrics_earned_label">Earned</string>
+    <string name="metrics_deducted_label">Deducted</string>
+    <string name="metrics_balance_label">Balance</string>
+    <string name="contacts_section_emergency_services">Emergency services</string>
+    <string name="contacts_section_personal">Family and personal</string>
+    <string name="contacts_call_name_cd">Call %1$s</string>
+</resources>

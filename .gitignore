@@ -1,0 +1,70 @@
+# Gradle / Kotlin
+.gradle/
+.kotlin/
+**/build/
+build/
+
+# Android Studio / IDE
+.idea/
+*.iml
+.vscode/
+
+# Local machine
+local.properties
+
+# Node
+node_modules/
+
+# Android outputs
+app/release/
+*.apk
+*.aab
+
+# Secrets
+app/keystore/
+*.jks
+*.keystore
+
+# Logs and debug dumps
+*.log
+*_log.txt
+agent_build_log*.txt
+build_log*.txt
+build_error*.log
+build_output.txt
+compile_*.log
+gradle_*_log.txt
+kapt_*.txt
+hilt_*.txt
+hs_err_pid*.log
+replay_pid*.log
+deps*.txt
+test_result*.txt
+log*.txt
+
+# Temp / accidental files
+tmp_*
+tatus
+
+# Firebase emulator
+firestore-debug.log
+
+# Local workflow artifacts
+.workflow/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Agent / tooling workspaces
+.hermes/
+.repowise/
+.cursor/
+.workflow/
+
+# Firebase config — copy app/google-services.json.example and fill in your own project
+app/google-services.json
+.firebaserc
+
+# QA artifacts
+artifacts/

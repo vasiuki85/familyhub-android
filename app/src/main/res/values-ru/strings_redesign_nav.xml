@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_redesign_today">Сегодня</string>
+    <string name="nav_redesign_food">Еда</string>
+    <string name="nav_redesign_settings">Настройки</string>
+</resources>

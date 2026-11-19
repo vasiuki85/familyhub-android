@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="recipes_error_load">Не удалось загрузить рецепты. Попробуйте снова.</string>
+    <string name="shopping_v2_more_actions_cd">Другие действия с покупками</string>
+    <string name="shopping_v2_switch_list_hint">Нажмите, чтобы сменить список</string>
+
+    <string name="recipes_v2_clear_search_cd">Очистить поиск рецептов</string>
+    <string name="recipes_v2_empty_filtered">По этим фильтрам рецепты не найдены</string>
+    <string name="recipes_v2_more_actions_cd">Другие действия с рецептом</string>
+    <string name="recipes_v2_meta">%1$d мин · %2$d порций</string>
+
+    <string name="menu_v2_week_heading">Меню на неделю</string>
+    <string name="menu_v2_more_actions_cd">Другие действия с меню</string>
+    <string name="recipes_v2_delete_title">Удалить рецепт?</string>
+    <string name="recipes_v2_delete_message">«%1$s» будет удалён из семейной книги рецептов.</string>
+    <string name="menu_v2_clear_title">Очистить меню этой недели?</string>
+    <string name="menu_v2_clear_message">Все запланированные блюда на эту неделю будут удалены.</string>
+    <string name="menu_v2_read_only_title">Меню доступно только для чтения</string>
+    <string name="menu_v2_recipe_servings">%1$s · %2$d порций</string>
+    <string name="menu_meal_open_recipe">Открыть рецепт</string>
+    <string name="menu_meal_replace_dish">Заменить блюдо</string>
+    <string name="menu_meal_assign_cook">Назначить другого</string>
+    <string name="menu_meal_remove">Убрать из меню</string>
+    <string name="menu_meal_more_actions_cd">Другие действия: %1$s</string>
+    <string name="menu_change_day_cook_cd">Сменить готовящего на этот день</string>
+    <plurals name="menu_meal_servings">
+        <item quantity="one">%d порция</item>
+        <item quantity="few">%d порции</item>
+        <item quantity="many">%d порций</item>
+        <item quantity="other">%d порции</item>
+    </plurals>
+</resources>

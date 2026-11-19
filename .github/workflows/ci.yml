@@ -1,0 +1,227 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  android-unit:
+    name: Android unit + build + schema drift
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+
+      - name: Provide Firebase config (placeholder for CI)
+        run: |
+          if [ ! -f app/google-services.json ]; then
+            cp app/google-services.json.example app/google-services.json
+          fi
+
+      - name: Run CI verifier self-tests
+        run: |
+          bash .github/scripts/verify-android-test-results.sh --self-test
+          bash .github/scripts/verify-firestore-test-results.sh --self-test
+          bash .github/scripts/verify-native-page-size.sh --self-test
+
+      - name: Set up JDK 17 (Temurin)
+        uses: actions/setup-java@03ad4de0992f5dab5e18fcb136590ce7c4a0ac95 # v5.6.0
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
+        with:
+          validate-wrappers: true
+
+      - name: Install Android SDK platform 35
+        run: |
+          yes | sdkmanager --licenses >/dev/null 2>&1 || true
+          sdkmanager "platforms;android-35" "build-tools;35.0.0"
+
+      - name: Make Gradle wrapper executable
+        run: chmod +x gradlew
+
+      - name: Run unit tests
+        run: ./gradlew --no-daemon --stacktrace :app:testDebugUnitTest
+
+      - name: Assemble debug APK
+        run: ./gradlew --no-daemon --stacktrace :app:assembleDebug
+
+      - name: Guard native 16 KiB page size
+        run: bash .github/scripts/verify-native-page-size.sh app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Compile androidTest sources
+        run: ./gradlew --no-daemon --stacktrace :app:compileDebugAndroidTestKotlin
+
+      - name: Guard Room schema drift
+        run: bash .github/scripts/guard-room-schema-drift.sh
+
+      - name: Guard default locale strings (EN values/, RU values-ru/)
+        run: bash .github/scripts/guard-default-locale-strings.sh
+
+      - name: Upload unit test reports on failure
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: android-unit-test-reports-${{ github.run_id }}
+          path: |
+            app/build/reports/tests/testDebugUnitTest/
+            app/build/test-results/testDebugUnitTest/
+          if-no-files-found: ignore
+
+      - name: Upload debug APK on success
+        if: success()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: app-debug-apk-${{ github.run_id }}
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+
+  firebase-config:
+    name: Detect Firebase config secret
+    runs-on: ubuntu-latest
+    outputs:
+      available: ${{ steps.detect.outputs.available }}
+    steps:
+      - name: Detect GOOGLE_SERVICES_JSON secret
+        id: detect
+        env:
+          GS: ${{ secrets.GOOGLE_SERVICES_JSON }}
+        run: |
+          if [ -n "$GS" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  android-instrumented:
+    name: Android instrumented (emulator API 35)
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    needs: firebase-config
+    if: needs.firebase-config.outputs.available == 'true'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+
+      - name: Provide Firebase config from repository secret
+        env:
+          GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
+        run: printf '%s' "$GOOGLE_SERVICES_JSON" > app/google-services.json
+
+      - name: Set up JDK 17 (Temurin)
+        uses: actions/setup-java@03ad4de0992f5dab5e18fcb136590ce7c4a0ac95 # v5.6.0
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@3f131e8634966bd73d06cc69884922b02e6faf92 # v6.2.0
+        with:
+          validate-wrappers: true
+
+      - name: Install Android SDK platform 35
+        run: |
+          yes | sdkmanager --licenses >/dev/null 2>&1 || true
+          sdkmanager "platforms;android-35" "build-tools;35.0.0"
+
+      - name: Make Gradle wrapper executable
+        run: chmod +x gradlew
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Run connectedDebugAndroidTest on emulator
+        uses: reactivecircus/android-emulator-runner@b530d96654c385303d652368551fb075bc2f0b6b # v2.35.0
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          force-avd-creation: true
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot-save -no-snapshot-load -noaudio -no-boot-anim
+          script: |
+            chmod +x gradlew
+            gradle_exit=0
+            ./gradlew --no-daemon --stacktrace connectedDebugAndroidTest || gradle_exit=$?
+            adb logcat -d > logcat.txt || true
+            verify_exit=0
+            bash .github/scripts/verify-android-test-results.sh || verify_exit=$?
+            if [[ "${gradle_exit}" -ne 0 ]]; then
+              echo "connectedDebugAndroidTest failed with exit code ${gradle_exit}"
+              exit "${gradle_exit}"
+            fi
+            if [[ "${verify_exit}" -ne 0 ]]; then
+              echo "androidTest result verifier failed with exit code ${verify_exit}"
+              exit "${verify_exit}"
+            fi
+
+      - name: Upload androidTest artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: android-instrumented-failure-${{ github.run_id }}
+          path: |
+            app/build/reports/androidTests/connected/
+            app/build/outputs/androidTest-results/connected/
+            logcat.txt
+          if-no-files-found: ignore
+
+  firestore-rules:
+    name: Firestore Security Rules (demo-familyhub)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+
+      - name: Set up JDK 21 (Temurin)
+        uses: actions/setup-java@03ad4de0992f5dab5e18fcb136590ce7c4a0ac95 # v5.6.0
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Set up Node.js LTS
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: firestore-rules-tests/package-lock.json
+
+      - name: Install Firestore rules test dependencies
+        run: npm ci --prefix firestore-rules-tests
+
+      - name: Run Firestore rules tests (local emulator only)
+        run: |
+          set -euo pipefail
+          npm test --prefix firestore-rules-tests 2>&1 | tee firestore-test.log
+          bash .github/scripts/verify-firestore-test-results.sh firestore-test.log 67
+
+      - name: Upload Firestore emulator log on failure
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: firestore-rules-failure-${{ github.run_id }}
+          path: |
+            firestore-test.log
+            firebase-debug.log
+          if-no-files-found: ignore

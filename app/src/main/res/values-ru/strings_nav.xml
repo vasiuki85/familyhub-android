@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Нижняя навигация (ru) -->
+    <string name="nav_label_home">Главная</string>
+    <string name="nav_label_tasks">Задачи</string>
+    <string name="nav_label_shopping">Покупки</string>
+    <string name="nav_label_calendar">Календарь</string>
+    <string name="nav_label_rating">Рейтинг</string>
+    <string name="nav_label_rewards">Награды</string>
+    <string name="nav_label_settings">Настройки</string>
+    <string name="nav_label_rules">Правила</string>
+    <string name="nav_label_goals">Цели</string>
+    <string name="nav_label_stats">Статистика</string>
+    <string name="nav_label_appreciations">Благодарности</string>
+    <string name="nav_label_report">Отчёт</string>
+    <string name="nav_label_recipes">Рецепты</string>
+    <string name="nav_label_menu">Меню</string>
+    <string name="nav_label_awesomeness">Моя крутость</string>
+    <string name="nav_label_contacts">Контакты</string>
+    <string name="nav_label_penalties">Списания баллов</string>
+    <string name="nav_label_more">Ещё</string>
+    <string name="nav_more_sheet_title">Все разделы</string>
+    <string name="nav_more_group_planning">Планирование</string>
+    <string name="nav_more_group_motivation">Мотивация</string>
+    <string name="nav_more_group_family">Семья и безопасность</string>
+    <string name="nav_more_configure">Настроить панель</string>
+</resources>

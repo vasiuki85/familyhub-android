@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_group_overdue">Просроченные</string>
+    <string name="task_overdue_badge">Просрочено</string>
+    <string name="tasks_group_today">Сегодня</string>
+    <string name="tasks_group_tomorrow">Завтра</string>
+    <string name="tasks_group_later">Позже</string>
+    <string name="tasks_group_no_date">Без срока</string>
+    <string name="tasks_group_todo">Нужно сделать</string>
+    <string name="tasks_group_waiting">Ждут подтверждения</string>
+    <string name="tasks_group_done">Готово</string>
+    <string name="tasks_group_count">%1$d</string>
+    <string name="tasks_filters_section_title">Поиск и фильтры</string>
+    <string name="tasks_editor_essentials_title">Основное</string>
+    <string name="tasks_editor_additional">Дополнительно</string>
+    <string name="tasks_editor_additional_expanded_cd">Скрыть дополнительные параметры</string>
+    <string name="tasks_editor_additional_collapsed_cd">Показать дополнительные параметры</string>
+    <string name="tasks_editor_close_cd">Закрыть редактор задачи</string>
+    <string name="tasks_editor_save_cd">Сохранить задачу</string>
+    <string name="rewards_hero_title">Копите баллы вместе</string>
+    <string name="rewards_hero_subtitle">Выберите приятную цель и отмечайте прогресс</string>
+    <string name="rewards_progress_remaining">Осталось %1$d баллов</string>
+    <string name="rewards_progress_ready">Награда уже доступна!</string>
+    <string name="rewards_progress_cd">%1$d из %2$d баллов накоплено</string>
+    <string name="rewards_catalog_item_cd">%1$s, стоимость %2$d баллов</string>
+    <string name="rewards_inactive_friendly_hint">Сейчас эта награда на паузе</string>
+    <string name="rewards_tab_catalog">Каталог</string>
+    <string name="rewards_tab_my_requests">Мои заявки</string>
+    <string name="rewards_tab_received">Полученные</string>
+    <string name="rewards_tab_pending_review">На рассмотрении</string>
+    <string name="rewards_tab_pending_badge">%1$s %2$d</string>
+    <string name="rewards_empty_title">Пока нет наград</string>
+    <string name="rewards_empty_description">Создайте первую семейную награду</string>
+    <string name="rewards_empty_catalog_member">Награды появятся здесь, когда их добавит родитель</string>
+    <string name="rewards_edit_cd">Редактировать награду</string>
+    <string name="rewards_edit_action">Управлять</string>
+    <string name="rewards_edit_dialog_title">Управление наградой</string>
+    <string name="rewards_requests_empty">У вас пока нет заявок на награды</string>
+    <string name="rewards_received_empty">Пока нет полученных наград</string>
+    <string name="rewards_pending_empty">Нет заявок, ожидающих решения</string>
+</resources>
