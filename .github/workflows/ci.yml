@@ -17,7 +17,9 @@ concurrency:
 jobs:
   android-unit:
     name: Android unit + build + schema drift
-    runs-on: ubuntu-latest
+    # ubuntu-24.04 ships the Android SDK with sdkmanager on PATH;
+    # ubuntu-latest (26.04) no longer preinstalls it.
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
 
     steps:
@@ -110,7 +112,7 @@ jobs:
 
   android-instrumented:
     name: Android instrumented (emulator API 35)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
     needs: firebase-config
     if: needs.firebase-config.outputs.available == 'true'
