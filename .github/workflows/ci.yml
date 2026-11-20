@@ -191,11 +191,11 @@ jobs:
             adb logcat -d > logcat.txt || true
             verify_exit=0
             bash .github/scripts/verify-android-test-results.sh || verify_exit=$?
-            if [[ "${gradle_exit}" -ne 0 ]]; then
+            if [ "${gradle_exit}" -ne 0 ]; then
               echo "connectedDebugAndroidTest failed with exit code ${gradle_exit}"
               exit "${gradle_exit}"
             fi
-            if [[ "${verify_exit}" -ne 0 ]]; then
+            if [ "${verify_exit}" -ne 0 ]; then
               echo "androidTest result verifier failed with exit code ${verify_exit}"
               exit "${verify_exit}"
             fi

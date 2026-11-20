@@ -4,6 +4,7 @@ import androidx.activity.ComponentActivity
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.performScrollTo
 import androidx.navigation.NavHostController
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.familyhub.R
@@ -42,19 +43,21 @@ class MoreDestinationsSheetTest {
 
         composeRule.waitForIdle()
 
+        // The sheet is a scrollable grid; on short viewports the lower items
+        // sit below the fold, so scroll each target into view before asserting.
         val title = composeRule.activity.getString(R.string.nav_more_sheet_title)
-        composeRule.onNodeWithText(title).assertIsDisplayed()
+        composeRule.onNodeWithText(title).performScrollTo().assertIsDisplayed()
 
         val planningGroup = composeRule.activity.getString(R.string.nav_more_group_planning)
-        composeRule.onNodeWithText(planningGroup).assertIsDisplayed()
+        composeRule.onNodeWithText(planningGroup).performScrollTo().assertIsDisplayed()
 
         val calendarLabel = composeRule.activity.getString(R.string.nav_label_calendar)
-        composeRule.onNodeWithText(calendarLabel).assertIsDisplayed()
+        composeRule.onNodeWithText(calendarLabel).performScrollTo().assertIsDisplayed()
 
         val ratingLabel = composeRule.activity.getString(R.string.nav_label_rating)
-        composeRule.onNodeWithText(ratingLabel).assertIsDisplayed()
+        composeRule.onNodeWithText(ratingLabel).performScrollTo().assertIsDisplayed()
 
         val settingsLabel = composeRule.activity.getString(R.string.foundation_v2_more_settings)
-        composeRule.onNodeWithText(settingsLabel).assertIsDisplayed()
+        composeRule.onNodeWithText(settingsLabel).performScrollTo().assertIsDisplayed()
     }
 }

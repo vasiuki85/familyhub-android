@@ -189,7 +189,10 @@ class TaskItemCardLayoutTest {
 
     private fun sampleTask(
         title: String,
-        dueDate: Long? = 1_725_000_000_000L,
+        // Future due date: the height budget covers the standard dense row
+        // (two-line title + meta + assignee line). A past due date adds the
+        // overdue badge as an extra text line — a different, taller variant.
+        dueDate: Long? = 4_102_444_800_000L,
         priority: TaskPriority = TaskPriority.HIGH,
     ): Task = Task(
         id = "task-1",
