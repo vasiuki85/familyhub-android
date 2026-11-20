@@ -28,6 +28,7 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -35,6 +36,8 @@ import androidx.navigation.NavController
 import com.familyhub.R
 import com.familyhub.ui.theme.FhModulePalette
 import com.familyhub.ui.theme.FhTheme
+
+const val MORE_DESTINATIONS_GRID_TEST_TAG = "more_destinations_grid"
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -54,7 +57,9 @@ fun MoreDestinationsSheet(
     ) {
         LazyVerticalGrid(
             columns = GridCells.Fixed(3),
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .testTag(MORE_DESTINATIONS_GRID_TEST_TAG),
             contentPadding = PaddingValues(
                 horizontal = FhTheme.spacing.lg,
                 vertical = FhTheme.spacing.lg,

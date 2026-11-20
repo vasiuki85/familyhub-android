@@ -2,9 +2,11 @@ package com.familyhub.ui.navigation
 
 import androidx.activity.ComponentActivity
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
-import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performScrollToNode
 import androidx.navigation.NavHostController
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.familyhub.R
@@ -43,21 +45,30 @@ class MoreDestinationsSheetTest {
 
         composeRule.waitForIdle()
 
-        // The sheet is a scrollable grid; on short viewports the lower items
-        // sit below the fold, so scroll each target into view before asserting.
+        // The grid lazily composes only visible items: a node below the fold
+        // does not exist in the semantics tree yet, so performScrollTo() on
+        // the node itself cannot find it. Scroll the grid container to each
+        // target instead, then assert it is displayed.
+        val grid = composeRule.onNodeWithTag(MORE_DESTINATIONS_GRID_TEST_TAG)
+
         val title = composeRule.activity.getString(R.string.nav_more_sheet_title)
-        composeRule.onNodeWithText(title).performScrollTo().assertIsDisplayed()
+        grid.performScrollToNode(hasText(title))
+        composeRule.onNodeWithText(title).assertIsDisplayed()
 
         val planningGroup = composeRule.activity.getString(R.string.nav_more_group_planning)
-        composeRule.onNodeWithText(planningGroup).performScrollTo().assertIsDisplayed()
+        grid.performScrollToNode(hasText(planningGroup))
+        composeRule.onNodeWithText(planningGroup).assertIsDisplayed()
 
         val calendarLabel = composeRule.activity.getString(R.string.nav_label_calendar)
-        composeRule.onNodeWithText(calendarLabel).performScrollTo().assertIsDisplayed()
+        grid.performScrollToNode(hasText(calendarLabel))
+        composeRule.onNodeWithText(calendarLabel).assertIsDisplayed()
 
         val ratingLabel = composeRule.activity.getString(R.string.nav_label_rating)
-        composeRule.onNodeWithText(ratingLabel).performScrollTo().assertIsDisplayed()
+        grid.performScrollToNode(hasText(ratingLabel))
+        composeRule.onNodeWithText(ratingLabel).assertIsDisplayed()
 
         val settingsLabel = composeRule.activity.getString(R.string.foundation_v2_more_settings)
-        composeRule.onNodeWithText(settingsLabel).performScrollTo().assertIsDisplayed()
+        grid.performScrollToNode(hasText(settingsLabel))
+        composeRule.onNodeWithText(settingsLabel).assertIsDisplayed()
     }
 }
