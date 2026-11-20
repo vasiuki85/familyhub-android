@@ -16,6 +16,8 @@ import com.familyhub.domain.model.Task
 import com.familyhub.domain.model.TaskStatus
 import com.familyhub.domain.model.TaskTransitionInvalidException
 import com.familyhub.domain.model.TaskTransitionResult
+import com.familyhub.domain.utils.AchievementEligibility
+import com.familyhub.domain.utils.AchievementEligibilitySnapshot
 import com.familyhub.domain.utils.CompletionCycleIds
 import com.familyhub.domain.utils.CompletionCycleMath
 import com.familyhub.domain.utils.CompletionCycleValidation
@@ -187,6 +189,7 @@ class TaskCompletionTransitionCoordinator @Inject constructor(
                     delta = refundDelta,
                     timestamp = undoTime
                 )
+                revokeIneligibleAchievements(activeCompletion.userId)
 
                 TaskTransitionResult(
                     taskId = taskId,
@@ -397,6 +400,35 @@ class TaskCompletionTransitionCoordinator @Inject constructor(
         }
 
         return unlocked
+    }
+
+    /**
+     * Undo mirror of [evaluateAchievements]: after the reversal is ledgered, drop any
+     * achievement whose eligibility no longer holds. Runs inside the undo transaction so a
+     * failure here rolls back the whole undo (score, wallet and ledger included).
+     */
+    private suspend fun revokeIneligibleAchievements(userId: String) {
+        val existing = userAchievementDao().getAchievementsForUser(userId).first()
+        val existingTypes = existing.mapNotNull { entity ->
+            runCatching { AchievementType.valueOf(entity.type) }.getOrNull()
+        }.toSet()
+        if (existingTypes.isEmpty()) return
+
+        val active = taskCompletionDao().getActiveCompletionsForUser(userId).first()
+        val hasAnyPerfectWeek = active
+            .groupBy { it.weekStartDate }
+            .values
+            .any { week -> week.none { it.penaltyPoints > 0 } }
+        val snapshot = AchievementEligibilitySnapshot(
+            totalCompletions = active.size,
+            // typesToRevoke only reads totalCompletions and hasAnyPerfectWeek.
+            currentWeekCompletionCount = 0,
+            currentWeekLateCompletionCount = 0,
+            hasAnyPerfectWeek = hasAnyPerfectWeek
+        )
+        AchievementEligibility.typesToRevoke(snapshot, existingTypes).forEach { type ->
+            userAchievementDao().deleteByUserAndType(userId, type.name)
+        }
     }
 
     private suspend fun loadTaskOrThrow(taskId: String): Task {
