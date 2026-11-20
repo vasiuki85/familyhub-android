@@ -116,7 +116,8 @@ class EncryptedRestoreCoordinatorTest {
 
         coordinator.inspect(backupFile, password)
 
-        assertEquals("restore-io-test", codecThread?.name)
+        // Prefix match: kotlinx.coroutines debug mode appends " @coroutine#N" to thread names.
+        assertTrue(codecThread?.name?.startsWith("restore-io-test") == true)
         assertNotEquals(callerThread, codecThread)
         assertTrue(password.all { it == '\u0000' })
     }
@@ -134,7 +135,8 @@ class EncryptedRestoreCoordinatorTest {
 
         coordinator.restore(backupFile, password, fingerprint)
 
-        assertEquals("restore-io-test", codecThread?.name)
+        // Prefix match: kotlinx.coroutines debug mode appends " @coroutine#N" to thread names.
+        assertTrue(codecThread?.name?.startsWith("restore-io-test") == true)
         assertNotEquals(callerThread, codecThread)
         assertTrue(password.all { it == '\u0000' })
     }
